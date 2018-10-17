@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  padding: 20px;
+  background-color: #0092E5;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #FFF;
+}
