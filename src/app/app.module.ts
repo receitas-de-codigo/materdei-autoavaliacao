@@ -6,6 +6,9 @@ import { HomeComponent } from './home/home.component';
 import { RegrasComponent } from './regras/regras.component';
 import { HomeModule } from './home/home.module';
 import { RegrasModule } from './regras/regras.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AppService } from './app.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,11 +22,13 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HomeModule,
     RegrasModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ AppService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,6 +3,8 @@ import { HomeComponent } from './home.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TituloModule } from '../titulo/titulo.module';
+import {ChartModule} from 'primeng/chart';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { TituloModule } from '../titulo/titulo.module';
   imports: [
     CommonModule,
     RouterModule,
-    TituloModule
+    TituloModule,
+    ChartModule
   ]
 })
 export class HomeModule {}

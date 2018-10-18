@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,25 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  data: any;
+
+  constructor(private appService: AppService) {
+    appService.getDadosGerais().subscribe(res => {
+      this.data = {
+        labels: res.labels,
+        datasets: [
+            {
+                label: 'Avaliação Geral',
+                backgroundColor: 'rgba(179,181,198,0.2)',
+                borderColor: 'rgba(179,181,198,1)',
+                pointBackgroundColor: 'rgba(179,181,198,1)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgba(179,181,198,1)',
+                data: res.data
+            }
+          ]
+      };
+    });
+  }
 }
