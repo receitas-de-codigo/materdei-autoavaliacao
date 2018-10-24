@@ -11,9 +11,10 @@ export class HomeComponent {
   data: any;
 
   constructor(private appService: AppService) {
+
     appService.getDadosGerais().subscribe(res => {
       this.data = {
-        labels: res.labels,
+        labels: res.map(item => item.caracteristica),
         datasets: [
             {
                 label: 'Avaliação Geral',
@@ -23,7 +24,7 @@ export class HomeComponent {
                 pointBorderColor: '#fff',
                 pointHoverBackgroundColor: '#fff',
                 pointHoverBorderColor: 'rgba(179,181,198,1)',
-                data: res.data
+                data: res.map( item => item.valor )
             }
           ]
       };

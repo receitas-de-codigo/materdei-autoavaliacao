@@ -1,7 +1,7 @@
 
 export class DadosGerais {
 
-  labels: string[];
-  data: number[];
+  caracteristica: string;
+  valor: number;
 
 }
