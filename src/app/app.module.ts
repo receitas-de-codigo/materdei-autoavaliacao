@@ -9,10 +9,13 @@ import { RegrasModule } from './regras/regras.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppService } from './app.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PerguntasModule } from './perguntas/perguntas.module';
+import { PerguntasComponent } from './perguntas/perguntas.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'regras', component: RegrasComponent }
+  { path: 'regras', component: RegrasComponent },
+  { path: 'perguntas', component: PerguntasComponent }
 ];
 
 
@@ -26,7 +29,8 @@ const routes: Routes = [
     HomeModule,
     RegrasModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    PerguntasModule
   ],
   providers: [ AppService ],
   bootstrap: [AppComponent]
