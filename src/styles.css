@@ -3,9 +3,33 @@
 body {
   margin: 0;
   padding: 0;
+  font: 300 14px Arial;
+  background: #F5F5F5;
 }
 .link {
   width: 100%;
   text-align: center;
   padding: 10px;
+}
+.link  a {
+  border: 1px solid #FF7C00;
+  color: #FF7C00;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 2px;
+  margin: 4px;
+}
+
+.link  a:hover {
+  color: #FFF;
+  background: #FF7C00;
+}
+
+.card {
+  margin: 20px auto;
+  width: 600px;
+  padding: 16px;
+  background: #FFF;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }

@@ -1,8 +1,11 @@
 
 <app-titulo label="AUTO-AVALIAÇÃO PERFIL EMPREENDEDOR"></app-titulo>
 
-<p-chart type="radar" [data]="data"></p-chart>
-
 <div class="link">
-  <a routerLink="regras">Consultar as Regras</a>
+  <a routerLink="regras">Regras</a>
+  <a routerLink="perguntas">Perguntas</a>
+</div>
+
+<div class="card">
+  <p-chart type="radar" [data]="data"></p-chart>
 </div>
